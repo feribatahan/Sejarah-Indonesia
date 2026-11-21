@@ -112,7 +112,7 @@ function finish(){
  out+=`</div><div class="small">Bank soal: ${currentPool.length} pertanyaan tersedia untuk tingkat ${$("level").value}. Soal diacak kembali setiap sesi.</div>`;
  $("result").innerHTML=out;$("result").classList.remove("hide");
 }
-function backHome(){$("result").classList.add("hide");$("intro").classList.remove("hide");window.scrollTo({top:0,behavior:"smooth"})}
+function backHome(){$("game").classList.add("hide");$("result").classList.add("hide");$("intro").classList.remove("hide");window.scrollTo({top:0,behavior:"smooth"})}
 function updateLevelInfo(){
  const selected=$("level").value;
  const available=selected==="Umum"?BANK.length:BANK.filter(q=>q.level===selected).length;
